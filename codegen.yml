@@ -1,0 +1,13 @@
+overwrite: true
+avoidOptionals: true
+schema: 
+  - "src/graphql/typeDefs/*.graphql"
+documents: null
+generates:
+  src/graphql/typeDefs/__generated__.ts:
+    config:
+      federation: true
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+      - "typescript-document-nodes"
